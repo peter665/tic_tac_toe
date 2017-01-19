@@ -54,8 +54,7 @@ class Board
 
   def turn(player)
     puts player[:name] + " its your turn now, please choose a position for your color! 1 to 9"
-    poz = gets.chomp.to_i
-    error_check(poz)
+    poz = error_check(gets.chomp.to_i)
     if @board[poz-1] == "_"
        @board[poz-1] = player[:color]
      else
